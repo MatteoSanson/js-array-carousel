@@ -44,20 +44,35 @@ const domItem = document.querySelectorAll(`.item`);
 console.log(domItem);
 
 // mlst2 3) aggiungo evento al click dei tasti. 
-prev.addEventListener (`click`, function(){
+// prev.addEventListener (`click`, function(){
+//     console.log(`ho cliccato sopra`);
+//     if (immagineCorrente > 0) {
+//         domItem[immagineCorrente].classList.remove(`active`);
+//         immagineCorrente--;
+//         domItem[immagineCorrente].classList.add(`active`);
+//     }
+// });
+
+// next.addEventListener (`click`, function(){
+//     console.log(`ho cliccato sotto`);
+//     if (immagineCorrente < domItem.length - 1) {
+//         domItem[immagineCorrente].classList.remove(`active`);
+//         immagineCorrente++;
+//         domItem[immagineCorrente].classList.add(`active`);
+//     }
+// });
+
+// bonus 1 
+prev.addEventListener('click', function () {
     console.log(`ho cliccato sopra`);
-    if (immagineCorrente > 0) {
-        domItem[immagineCorrente].classList.remove(`active`);
-        immagineCorrente--;
-        domItem[immagineCorrente].classList.add(`active`);
-    }
+    domItem[immagineCorrente].classList.remove(`active`);
+    immagineCorrente = (immagineCorrente - 1 + domItem.length) % domItem.length;
+    domItem[immagineCorrente].classList.add(`active`);
 });
 
-next.addEventListener (`click`, function(){
+next.addEventListener('click', function () {
     console.log(`ho cliccato sotto`);
-    if (immagineCorrente < domItem.length - 1) {
-        domItem[immagineCorrente].classList.remove(`active`);
-        immagineCorrente++;
-        domItem[immagineCorrente].classList.add(`active`);
-    }
+    domItem[immagineCorrente].classList.remove(`active`);
+    immagineCorrente = (immagineCorrente + 1) % domItem.length;
+    domItem[immagineCorrente].classList.add(`active`);
 });

@@ -13,6 +13,8 @@ Tutte le immagini saranno nascoste, tranne la prima, che avrà una classe specif
 2) Per ogni elemento immagine voglio inserire nel codice html un elemento `<div>`.
 3) Aggiungo la classe "attiva" al `<div>` sull'immagine corrente.
 
+<br>
+
 ## MILESTONE 2
 Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, che quindi verrà visualizzata al posto della precedente.
 
@@ -20,3 +22,8 @@ Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, c
 1) genero la costante lista-nodi dei div presenti nel dom con la classe che mi interessa. 
 2) mi creo le variabili per i tasti prev e next.
 3) aggiungo evento al click dei tasti.
+
+<br>
+
+## BONUS 1
+Aggiungere il ciclo infinito del carosello. Ovvero se è attiva la prima immagine e l'utente clicca la freccia per andare all’immagine precedente, dovrà comparire l’ultima immagine dell’array e viceversa.
